@@ -13,8 +13,8 @@ async function generateJoke() {
 
         const data = await response.json();
 
-        setupText.textContent = data.setup;
-        paragraphText.textContent = data.punchline;
+        setupText.textContent = 'Setup: ' + data.setup;
+        paragraphText.textContent = 'Punchline: ' + data.punchline;
     }
     catch(error) {
         console.error(error);
